@@ -363,27 +363,28 @@ How does habitat and season influence mushroom toxicity?
    
    **1.** Data Preparation: We split our preprocessed data into our features and target arrays & scaled the data
 
- <img src="https://github.com/Ahoust7/Project-4/assets/119274891/a4d688f0-dccf-4b75-b79e-d6a10a2da3d6" alt="alt text" width="whatever" height="whatever">
+   <img src="https://github.com/Ahoust7/Project-4/assets/118685191/fb25ae8e-b260-4eeb-a2ab-5a380eb8bef7" alt="alt text" width="whatever" height="whatever">
+
 
    **2.** Model Setup: We defined our model and deep neural net
 
- <img src="https://github.com/Ahoust7/Project-4/assets/119274891/471d14e3-db52-471b-a102-58b416cf8589" alt="alt text" width="whatever" height="whatever">
+   <img src="https://github.com/Ahoust7/Project-4/assets/118685191/f7c6b5c8-0e11-4b29-8635-833f8bcc20dd" alt="alt text" width="whatever" height="whatever">
 
    **3.** We compiled and trained the model 
 
- <img src="https://github.com/Ahoust7/Project-4/assets/119274891/a84516fe-bc6a-4526-a04f-24ecfaa43eb9" alt="alt text" width="whatever" height="whatever">
+   <img src="https://github.com/Ahoust7/Project-4/assets/118685191/ceeffc6d-5cdb-4432-bd2c-bf86d8ff535b" alt="alt text" width="whatever" height="whatever">
 
    **4.** We evaluated the model using the test data
 
- <img src="https://github.com/Ahoust7/Project-4/assets/119274891/8687294a-ce27-4b03-8450-3cf8763960a0" alt="alt text" width="whatever" height="whatever">
+   <img src="https://github.com/Ahoust7/Project-4/assets/118685191/9ddaf799-af7c-4340-9034-2ef56b0bab82" alt="alt text" width="whatever" height="whatever">
 
    #### Deep Neural Net Findings
 
-   - To define the model in Step 2, we determined the number of input features we will use, how many hidden layers we were creating, and how many nodes each layer would use. For this model we chose 2 hidden layers with 100 and 75 nodes respectively, we also chose to use all the available features. The activation function for the two hidden layers was ReLU, which was chosen to explore non-linearity. For the output layer, we used sigmoid. 
+   - To define the model in Step 2, we determined the number of input features we will use, how many hidden layers we were creating, and how many nodes each layer would use. For this model we chose 2 hidden layers with 100 and 75 nodes respectively, we also chose to use all the available features. The activation function for the two hidden layers was ReLU, which was chosen to explore non-linearity. For the output layer, we used sigmoid. If we were continuing to work on this model further hyper parameter tuning could be done. 
  
    - When compiling the model we chose the `binary_crossentropy` function to calculate the loss because this is a binary classification model and this function computes the loss between true labels and predicted labels. Then when training the model, we included a callback for earlystop to monitor val_loss and prevent overtraining the model. We found after a few attempts that 10 epochs gave use the highest accuracy with the lowest loss.
 
-   - When evaluating the model in Step 4, it's evident that we've achieved 98.28% accuracy a loss of 0.0515. 
+   - When evaluating the model in Step 4, it's evident that we've achieved 97.31% accuracy a loss of 0.07667. 
 
 
 ## Conclusion and Next Steps
@@ -392,7 +393,7 @@ We were able to build several models that accurately predict the edibility or to
 
    **1.** A *Convolutional Neural Network Model* with Images of mushrooms to see if we can use images to identify if a mushroom is edible or poisonous.
     
-   **2.** Using *Saliency Maps* to see if what highlighted features of the mushroom are relevant for classification of it being edible or poisonous and explore similarities/differences with features in current data set.
+   **2.** Using *Saliency Maps* to see what highlighted features of the mushroom are relevant for classification of it being edible or poisonous and explore similarities/differences with features in current data set.
 
 Our group also discussed how changes in laws surrounding the cultivation and use of mushrooms containing psylocibin for therapeutic purposes will change the data landscape for mushrooms. Currently psylocibin is a controlled substance and data is not available or what is available is federally controlled. As the use of psylocibin mushrooms increases in western medicine and data is released. Adding the features of psilocybin mushrooms as a hallucinogenic classification category is a possibility.
 
